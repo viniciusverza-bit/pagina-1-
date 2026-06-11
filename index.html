@@ -1,1 +1,62 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovens Técnicos na Saúde Pública</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Inovação e Saúde</h1>
+            <p>Como os jovens de cursos técnicos podem transformar a saúde pública</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>O Poder do Ensino Técnico</h2>
+            <p>Estudantes de cursos técnicos possuem conhecimento prático e rápido, essencial para resolver problemas reais do Sistema Único de Saúde (SUS). Seja na TI, na administração ou na enfermagem, a juventude tem a força para inovar.</p>
+        </section>
+
+        <section class="areas">
+            <h2>Principais Áreas de Impacto</h2>
+            <div class="grid-areas">
+                <div class="card">
+                    <h3>Técnico em Informática / TI</h3>
+                    <p>Desenvolvimento de aplicativos de agendamento, organização de banco de dados de pacientes e otimização de sistemas de triagem.</p>
+                </div>
+                <div class="card">
+                    <h3>Técnico em Enfermagem / Saúde</h3>
+                    <p>Apoio direto em campanhas de vacinação, mutirões de conscientização e atendimento humanizado à comunidade.</p>
+                </div>
+                <div class="card">
+                    <h3>Técnico em Administração</h3>
+                    <p>Melhoria na gestão de insumos e estoques de hospitais, organização de filas e otimização de fluxos de atendimento.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="acao">
+            <h2>Envie sua Ideia de Projeto</h2>
+            <p>Se você estuda ou se interessa pelo ensino técnico, compartilhe como sua área pode ajudar!</p>
+            <form id="form-ideia">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+                <input type="text" id="curso" placeholder="Seu Curso Técnico" required>
+                <textarea id="ideia" placeholder="Descreva sua ideia para a saúde pública..." rows="4" required></textarea>
+                <button type="submit">Enviar Ideia</button>
+            </form>
+            <div id="mensagem-sucesso" class="hidden">Obrigado! Sua ideia foi enviada com sucesso e pode mudar vidas.</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Jovens na Saúde Pública. Desenvolvido para inspirar o futuro.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
