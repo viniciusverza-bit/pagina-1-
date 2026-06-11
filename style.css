@@ -1,1 +1,29 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('form-ideia');
+    const mensagemSucesso = document.getElementById('mensagem-sucesso');
+
+    form.addEventListener('submit', (event) => {
+        // Impede o comportamento padrão de recarregar a página
+        event.preventDefault();
+
+        // Captura os valores digitados pelo jovem técnico
+        const nome = document.getElementById('nome').value;
+        const curso = document.getElementById('curso').value;
+        const ideia = document.getElementById('ideia').value;
+
+        // Aqui os dados poderiam ser enviados para um servidor/API externa
+        console.log('Nova ideia recebida!', { nome, curso, ideia });
+
+        // Exibe a mensagem de sucesso na tela
+        mensagemSucesso.classList.remove('hidden');
+
+        // Limpa o formulário para novos envios
+        form.reset();
+
+        // Esconde a mensagem de sucesso após 5 segundos
+        setTimeout(() => {
+            mensagemSucesso.classList.add('hidden');
+        }, 5000);
+    });
+});
