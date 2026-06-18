@@ -1,29 +1,198 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('form-ideia');
-    const mensagemSucesso = document.getElementById('mensagem-sucesso');
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
 
-    form.addEventListener('submit', (event) => {
-        // Impede o comportamento padrão de recarregar a página
-        event.preventDefault();
+/* Cabeçalho */
+header {
+    background-color: #004d61;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        // Captura os valores digitados pelo jovem técnico
-        const nome = document.getElementById('nome').value;
-        const curso = document.getElementById('curso').value;
-        const ideia = document.getElementById('ideia').value;
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
 
-        // Aqui os dados poderiam ser enviados para um servidor/API externa
-        console.log('Nova ideia recebida!', { nome, curso, ideia });
+header nav ul {
+    display: flex;
+    list-style: none;
+}
 
-        // Exibe a mensagem de sucesso na tela
-        mensagemSucesso.classList.remove('hidden');
+header nav ul li {
+    margin-left: 20px;
+}
 
-        // Limpa o formulário para novos envios
-        form.reset();
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-        // Esconde a mensagem de sucesso após 5 segundos
-        setTimeout(() => {
-            mensagemSucesso.classList.add('hidden');
-        }, 5000);
-    });
-});
+header nav ul li a:hover {
+    color: #00cc99;
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    background: linear-gradient(rgba(0, 77, 97, 0.8), rgba(0, 77, 97, 0.9)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    background-color: #00cc99;
+    color: #004d61;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #00b386;
+}
+
+/* Seção de Cards */
+.cards-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.cards-section h2 {
+    margin-bottom: 40px;
+    color: #004d61;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #00cc99;
+    margin-bottom: 15px;
+}
+
+/* Formulário e Mural */
+.form-section {
+    background-color: #eef2f5;
+    padding: 60px 10%;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+    color: #004d61;
+    margin-bottom: 10px;
+}
+
+.form-section p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Mural de Ideias */
+.mural {
+    margin-top: 40px;
+    border-top: 2px solid #eef2f5;
+    padding-top: 20px;
+}
+
+.mural h3 {
+    color: #004d61;
+    margin-bottom: 15px;
+}
+
+.idea-box {
+    background: #f4f7f6;
+    padding: 15px;
+    border-left: 5px solid #00cc99;
+    margin-bottom: 15px;
+    border-radius: 0 4px 4px 0;
+}
+
+.idea-box strong {
+    color: #004d61;
+}
+
+.empty-message {
+    color: #999;
+    font-style: italic;
+}
+
+/* Rodapé */
+footer {
+    background-color: #004d61;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
