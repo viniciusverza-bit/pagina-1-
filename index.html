@@ -1,60 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jovens Técnicos na Saúde Pública</title>
+    <title>Técnicos na Saúde Pública</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>TECNOLOGIA E SAÙDE</h1>
-            <p>Como os jovens de cursos técnicos podem transformar a saúde pública</p>
-        </div>
+        <div class="logo">Mentes Técnicas</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#atuacao">Áreas de Atuação</a></li>
+                <li><a href="#ideias">Enviar Ideias</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="intro">
-            <h2>O Poder do Ensino Técnico</h2>
-            <p>Estudantes de cursos técnicos possuem conhecimento prático e rápido, essencial para resolver problemas reais do Sistema Único de Saúde (SUS). Seja na TI, na administração ou na enfermagem, a juventude tem a força para inovar.</p>
-        </section>
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>O Futuro da Saúde Pública passa pelo Ensino Técnico</h1>
+            <p>Descubra como jovens estudantes de cursos técnicos podem transformar comunidades e salvar vidas através da inovação e do suporte prático.</p>
+            <a href="#atuacao" class="btn">Ver Áreas de Impacto</a>
+        </div>
+    </section>
 
-        <section class="areas">
-            <h2>Principais Áreas de Impacto</h2>
-            <div class="grid-areas">
-                <div class="card">
-                    <h3>Técnico em Informática / TI</h3>
-                    <p>Desenvolvimento de aplicativos de agendamento, organização de banco de dados de pacientes e otimização de sistemas de triagem.</p>
-                </div>
-                <div class="card">
-                    <h3>Técnico em Enfermagem / Saúde</h3>
-                    <p>Apoio direto em campanhas de vacinação, mutirões de conscientização e atendimento humanizado à comunidade.</p>
-                </div>
-                <div class="card">
-                    <h3>Técnico em Administração</h3>
-                    <p>Melhoria na gestão de insumos e estoques de hospitais, organização de filas e otimização de fluxos de atendimento.</p>
+    <section id="atuacao" class="cards-section">
+        <h2>Como os Cursos Técnicos Podem Ajudar?</h2>
+        <div class="cards-container">
+            
+            <div class="card">
+                <h3>Técnico em Enfermagem / Saúde</h3>
+                <p>Atuação direta na linha de frente: campanhas de vacinação, aferição de sinais vitais e orientação preventiva nas comunidades.</p>
+            </div>
+
+            <div class="card">
+                <h3>Técnico em Informática / TI</h3>
+                <p>Desenvolvimento de aplicativos para agendamento de consultas, mapeamento de focos de doenças e organização de dados dos postos de saúde.</p>
+            </div>
+
+            <div class="card">
+                <h3>Técnico em Análises Clínicas / Química</h3>
+                <p>Suporte fundamental em laboratórios públicos, agilizando exames de rotina e ajudando no controle de epidemias regionais.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="ideias" class="form-section">
+        <div class="form-container">
+            <h2>Tem uma ideia de projeto técnico para a saúde?</h2>
+            <p>Compartilhe seu insight e veja sua sugestão aparecer no mural abaixo!</p>
+            
+            <form id="ideaForm">
+                <input type="text" id="studentName" placeholder="Seu nome" required>
+                <input type="text" id="studentCourse" placeholder="Seu curso técnico" required>
+                <textarea id="studentIdea" placeholder="Descreva sua ideia para melhorar a saúde pública..." rows="4" required></textarea>
+                <button type="submit" class="btn">Publicar Ideia</button>
+            </form>
+
+            <div class="mural">
+                <h3>Mural de Ideias Compartilhadas</h3>
+                <div id="ideasContainer">
+                    <p class="empty-message">Nenhuma ideia enviada ainda. Seja o primeiro!</p>
                 </div>
             </div>
-        </section>
-
-        <section class="acao">
-            <h2>Envie sua Ideia de Projeto</h2>
-            <p>Se você estuda ou se interessa pelo ensino técnico, compartilhe como sua área pode ajudar!</p>
-            <form id="form-ideia">
-                <input type="text" id="nome" placeholder="Seu Nome" required>
-                <input type="text" id="curso" placeholder="Seu Curso Técnico" required>
-                <textarea id="ideia" placeholder="Descreva sua ideia para a saúde pública..." rows="4" required></textarea>
-                <button type="submit">Enviar Ideia</button>
-            </form>
-            <div id="mensagem-sucesso" class="hidden">Obrigado! Sua ideia foi enviada com sucesso e pode mudar vidas.</div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 - Projeto Jovens na Saúde Pública. Desenvolvido para inspirar o futuro.</p>
+        <p>&copy; 2026 Jovens na Saúde Pública. Desenvolvido para transformar realidades.</p>
     </footer>
 
     <script src="script.js"></script>
